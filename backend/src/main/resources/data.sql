@@ -1,47 +1,33 @@
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abantza', 'Basque Country', '', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abarne', 'Basque Country', 'Ramos (es)', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abauntza', 'Basque Country', '', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abeliñe', 'Basque Country', 'Avelina (es)', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abeliñe', 'Basque Country', 'Aveline (fr)', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abene', 'Basque Country', 'Pilar (es)', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Aberria', 'Basque Country', '', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abesti', 'Basque Country', '', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abieta', 'Basque Country', '', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abitza', 'Basque Country', '', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Adartza', 'Basque Country', '', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Adats', 'Basque Country', '', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Adela', 'Basque Country', 'Adela (es)', 'FEMALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Adela', 'Basque Country', 'Adèle (fr)', 'FEMALE');
+INSERT INTO tb_name (name, meaning, gender) VALUES ('Abantza', '', 'FEMALE');
+INSERT INTO tb_name (name, meaning, gender) VALUES ('Abarne', 'Ramos (es)', 'FEMALE');
+INSERT INTO tb_name (name, meaning, gender) VALUES ('Abauntza', '', 'FEMALE');
+INSERT INTO tb_name (name, meaning, gender) VALUES ('Abel', 'Abel(es)', 'MALE');
+INSERT INTO tb_name (name, meaning, gender) VALUES ('Abel', 'Abel(fr)', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Abelin', 'Avelino (es)', 'MALE');
 
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abaigar', 'Basque Country', '', 'MALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abar', 'Basque Country', 'Ramos (es)', 'MALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abas', 'Basque Country', 'Abas (es)', 'MALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abas', 'Basque Country', 'Abas (fr)', 'MALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abauntz', 'Basque Country', '', 'MALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abel', 'Basque Country', 'Abel(es)', 'MALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abel', 'Basque Country', 'Abel(fr)', 'MALE');
-INSERT INTO tb_name (name, origin, meaning, gender) 
-	VALUES ('Abelin', 'Basque Country', 'Avelino (es)', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Bruno', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Romeu', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Julia', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Marcelo', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Rodolfo', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Panda', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Evandro', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Daniel', '', 'MALE');
+
+INSERT INTO tb_country (name) VALUES ('Basque Country (Spain)');
+INSERT INTO tb_country (name) VALUES ('Brazil');
+INSERT INTO tb_country (name) VALUES ('Spain');
+INSERT INTO tb_country (name) VALUES ('Portugal');
+
+INSERT INTO tb_name_country (name_id, country_id) VALUES ('1', '2');
+INSERT INTO tb_name_country (name_id, country_id) VALUES ('2', '1');
+INSERT INTO tb_name_country (name_id, country_id) VALUES ('3', '4');
+INSERT INTO tb_name_country (name_id, country_id) VALUES ('4', '1');
+INSERT INTO tb_name_country (name_id, country_id) VALUES ('5', '1');
+INSERT INTO tb_name_country (name_id, country_id) VALUES ('6', '3');
+INSERT INTO tb_name_country (name_id, country_id) VALUES ('7', '2');
+INSERT INTO tb_name_country (name_id, country_id) VALUES ('8', '2');
+
+
 
 

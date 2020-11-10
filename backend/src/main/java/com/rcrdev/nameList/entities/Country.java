@@ -3,18 +3,14 @@ package com.rcrdev.nameList.entities;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_name")
-public class Name implements Serializable {
+@Table(name = "tb_country")
+public class Country implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -22,24 +18,13 @@ public class Name implements Serializable {
 	private Long id;
 	private String name;
 	
-	@OneToOne(fetch = FetchType.EAGER)
-	@JoinTable(name = "tb_name_country",
-		joinColumns = @JoinColumn(name = "name_id"),
-		inverseJoinColumns = @JoinColumn(name = "country_id"))
-	private Country origin;
-	private String meaning;
-	private String gender;
-	
-	public Name() {
+	public Country () {
 	}
 
-	public Name(Long id, String name, Country origin, String meaning, String gender) {
+	public Country(Long id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.origin = origin;
-		this.meaning = meaning;
-		this.gender = gender;
 	}
 
 	public Long getId() {
@@ -58,30 +43,6 @@ public class Name implements Serializable {
 		this.name = name;
 	}
 
-	public Country getOrigin() {
-		return origin;
-	}
-
-	public void setOrigin(Country origin) {
-		this.origin = origin;
-	}
-
-	public String getMeaning() {
-		return meaning;
-	}
-
-	public void setMeaning(String meaning) {
-		this.meaning = meaning;
-	}
-	
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -98,7 +59,7 @@ public class Name implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Name other = (Name) obj;
+		Country other = (Country) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -108,4 +69,5 @@ public class Name implements Serializable {
 	}
 	
 	
+
 }

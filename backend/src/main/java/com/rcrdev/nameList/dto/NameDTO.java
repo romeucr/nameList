@@ -1,45 +1,38 @@
-package com.rcrdev.nameList.entities;
+package com.rcrdev.nameList.dto;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import com.rcrdev.nameList.entities.Name;
 
-@Entity
-@Table(name = "tb_name")
-public class Name implements Serializable {
+public class NameDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Long id;
 	private String name;
-	
-	@OneToOne(fetch = FetchType.EAGER)
-	@JoinTable(name = "tb_name_country",
-		joinColumns = @JoinColumn(name = "name_id"),
-		inverseJoinColumns = @JoinColumn(name = "country_id"))
-	private Country origin;
+	private CountryDTO origin;
 	private String meaning;
 	private String gender;
 	
-	public Name() {
+	public NameDTO() {
 	}
 
-	public Name(Long id, String name, Country origin, String meaning, String gender) {
+	public NameDTO(Long id, String name, CountryDTO origin, String meaning, String gender) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.origin = origin;
 		this.meaning = meaning;
 		this.gender = gender;
+	}
+	
+	public NameDTO(Name entity) {
+		super();
+		this.id = entity.getId();
+		this.name = entity.getName();
+		this.origin = new CountryDTO(entity.getOrigin());
+		this.meaning = entity.getMeaning();
+		this.gender = entity.getGender();
 	}
 
 	public Long getId() {
@@ -58,11 +51,11 @@ public class Name implements Serializable {
 		this.name = name;
 	}
 
-	public Country getOrigin() {
+	public CountryDTO getOrigin() {
 		return origin;
 	}
 
-	public void setOrigin(Country origin) {
+	public void setOrigin(CountryDTO origin) {
 		this.origin = origin;
 	}
 
@@ -98,7 +91,7 @@ public class Name implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Name other = (Name) obj;
+		NameDTO other = (NameDTO) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
