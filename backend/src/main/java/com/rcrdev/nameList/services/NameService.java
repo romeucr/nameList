@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.rcrdev.nameList.dto.NameDTO;
 import com.rcrdev.nameList.entities.Name;
 import com.rcrdev.nameList.repositories.NameRepository;
+import com.rcrdev.nameList.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class NameService {
@@ -31,15 +32,31 @@ public class NameService {
 	public List<NameDTO> findByName(String name) {
 		List<Name> nameList = nameRepository.findByNameLikeIgnoreCase("%"+name+"%");
 			
+		if (nameList.size() == 0) {
+			throw new ResourceNotFoundException("Name not found on database");
+		}
+		
 		return nameList.stream().map(obj -> new NameDTO(obj)).collect(Collectors.toList());
 	}
 	
 	@Transactional(readOnly = true)
 	public List<NameDTO> findNameStartsWithLetter(char letter) {
-		List<Name> nameList = nameRepository.findByNameStartsWithIgnoreCase(letter);
 		
-		return nameList.stream().map(obj -> new NameDTO(obj)).collect(Collectors.toList());
+			List<Name> nameList;
+			try {
+				nameList = nameRepository.findByNameStartsWithIgnoreCase(letter);
+			} catch (IllegalArgumentException e) {
+				throw new IllegalArgumentException();
+
+			}			
+			
+			
+			if (nameList.size() == 0) {
+				throw new ResourceNotFoundException("Name not found on database");
+			}
+			
+			return nameList.stream().map(obj -> new NameDTO(obj)).collect(Collectors.toList());
+	
+	
 	}
-	
-	
 }
