@@ -1,25 +1,22 @@
 import React from 'react'
-import Switch from 'react-bootstrap/esm/Switch'
-import { BrowserRouter, Route } from 'react-router-dom'
-import SiteHeader from './core/components/SiteHeader'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Navbar from './core/components/Navbar'
 import Home from './pages/Home'
 import Search from './pages/Search'
 
-
 const Routes = () => (
    <BrowserRouter>
-      <SiteHeader />
+      <Navbar />
       <Switch>
          <Route path="/" exact>
             <Home />
          </Route>
 
-         <Route path="/search" exact>
+         <Route path="/search">
             <Search />
          </Route>
       </Switch>
-
-   </BrowserRouter>   
+   </BrowserRouter>
 )
 
 export default Routes

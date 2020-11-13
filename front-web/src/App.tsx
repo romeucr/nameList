@@ -1,13 +1,12 @@
-import React from 'react';
-import Routes from './Routes';
-import './App.css';
+import React from 'react'
+import './core/assets/styles/custom.scss'
+import './app.scss'
+import Routes from './Routes'
 
-function App() {
-  return (
-    <main>
+const App = () => {
+   return (
       <Routes />
-    </main>
-  );
+   )
 }
 
-export default App;
+export default App
