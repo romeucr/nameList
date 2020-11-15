@@ -1,8 +1,14 @@
 import React from 'react'
+import './styles.scss'
 
 const Search = () => (
-   <div>
-      <h1>Search</h1>
+   <div className="search-container">
+      <div className="search-options">
+         <h5>Search options</h5>
+      </div>
+      <div className="search-result">
+         search result
+      </div>
    </div>
 )
 
