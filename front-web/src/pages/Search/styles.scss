@@ -2,6 +2,7 @@
    margin-top: 20px;
    padding: 0 40px; 
    display: flex;
+
 }
 
 .search-options,
@@ -20,3 +21,30 @@
 .search-result {
    flex-grow: 2;
 }
+
+.name-input {
+   margin-bottom: 50px;
+   margin-right: 10px;
+}
+
+.radio-btn {
+   display: inline-block;
+   margin: 10px;
+}
+
+.records-table {
+   width: 100%;
+   border-bottom: 1px solid;
+   border-radius: 0 0 10px 10px;
+ }
+ 
+ .records-table thead {
+   background-color: darkgray;
+   text-align: left;
+   border-radius: 10px;
+ }
+ 
+ .records-table thead tr {
+   height: 50px;
+ }
+
