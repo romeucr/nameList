@@ -34,7 +34,6 @@ public class NameResource {
 		return ResponseEntity.ok().body(nameList);
 	}
 	
-	
 	@GetMapping(value = "/{name}")
 	public ResponseEntity<?> findByName(@PathVariable String name) {
 		List<NameDTO> nameList = nameService.findByName(name);

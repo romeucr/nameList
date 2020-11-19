@@ -2,7 +2,6 @@
    margin-top: 20px;
    padding: 0 40px; 
    display: flex;
-
 }
 
 .search-options,
@@ -16,6 +15,7 @@
 .search-options{
    flex-grow: 1;
    margin-right: 40px;
+   align-self: baseline;
 }
 
 .search-result {
@@ -32,19 +32,12 @@
    margin: 10px;
 }
 
-.records-table {
-   width: 100%;
-   border-bottom: 1px solid;
-   border-radius: 0 0 10px 10px;
- }
- 
- .records-table thead {
-   background-color: darkgray;
-   text-align: left;
-   border-radius: 10px;
- }
- 
- .records-table thead tr {
-   height: 50px;
- }
+.search-result-title {
+   font-size: 24px;
+   font-weight: 400;
+   margin-bottom: 10px;
+}
 
+.table {
+   text-align: center;
+}

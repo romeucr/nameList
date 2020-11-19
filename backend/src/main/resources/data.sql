@@ -7,7 +7,7 @@ INSERT INTO tb_name (name, meaning, gender)	VALUES ('Abelin', 'Avelino (es)', 'M
 
 INSERT INTO tb_name (name, meaning, gender)	VALUES ('Bruno', '', 'MALE');
 INSERT INTO tb_name (name, meaning, gender)	VALUES ('Romeu', '', 'MALE');
-INSERT INTO tb_name (name, meaning, gender)	VALUES ('Julia', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Julia', '', 'FEMALE');
 INSERT INTO tb_name (name, meaning, gender)	VALUES ('Marcelo', '', 'MALE');
 INSERT INTO tb_name (name, meaning, gender)	VALUES ('Rodolfo', '', 'MALE');
 INSERT INTO tb_name (name, meaning, gender)	VALUES ('Panda', '', 'MALE');
