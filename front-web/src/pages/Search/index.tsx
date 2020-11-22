@@ -2,35 +2,48 @@ import React, { useEffect, useState } from 'react'
 import ButtonIcon from '../../core/components/ButtonIcon'
 import { NameResponse } from '../../core/types/Name'
 import { makeRequest } from '../../core/utils/request'
+import { useForm } from 'react-hook-form';
 import './styles.scss'
+import Pagination from '../../core/components/Pagination';
 
 
 const Search = () => {
 
+   type FormData = {
+      name: string
+   }
+
    const [nameResponse, setNameResponse] = useState<NameResponse>()
-   
+   const [activePage, setActivePage] = useState(0)
+
+   const { register, handleSubmit } = useForm<FormData>()
+
    useEffect(() => {
       const params = {
-         page: 0,
+         page: activePage,
          linesPerPage: 12
       }
       makeRequest({ url: '/names', params })
          .then(response => setNameResponse(response.data))
-   }, [])
+   }, [activePage])
+   
+   const onSubmit = (data: FormData) => {
+      console.log(data)
+   }
 
    return (
       <div className="search-container">
          <div className="search-options">
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
                <fieldset>
-                  <legend>Search by name:</legend>
+                  <legend>Search name:</legend>
                   <label htmlFor="name-input">Name:</label><br />
                   <input
                      type="text"
                      className="name-input"
                      name="name-input"
                      required
-
+                     ref={register}
                   />
                   <ButtonIcon text="Search" />
                </fieldset>
@@ -170,7 +183,15 @@ const Search = () => {
                   ))}
                </tbody>
             </table>
+            {nameResponse && 
+               <Pagination 
+                  totalPages={nameResponse.totalPages}
+                  activePage={activePage}
+                  onChange={page => setActivePage(page)}
+               />
+            }
          </div>
+
       </div>
    )
 
