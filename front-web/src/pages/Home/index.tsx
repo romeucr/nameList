@@ -10,7 +10,7 @@ const Home = () => (
          <div className="col-6">
             <h1 className="text-title">Home</h1>
             <p className="text">
-               The names used in this site was colected from
+               The names used in this site were colected from
                <a href="https://www.euskaltzaindia.eus/en/" target="_blank" rel="noreferrer"> Euskaltzaindia's website</a>.
             </p>
             <p>

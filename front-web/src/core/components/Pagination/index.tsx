@@ -24,7 +24,7 @@ const Pagination = ({ totalPages, activePage, onChange }:Props) => {
             className={`pagination-prev ${previousClass}`}
             onClick={() => onChange(activePage - 1)}
          >
-               &lt;
+               &lt; {/* //codigo para > */}
          </span>
          {items.map(item => (
             <div 
@@ -39,7 +39,7 @@ const Pagination = ({ totalPages, activePage, onChange }:Props) => {
             className={`pagination-prev ${nextClass}`}
             onClick={() => onChange(activePage + 1)}
          >
-            &gt;
+            &gt; {/* //codigo para < */}
          </span>
       </div>
    )
