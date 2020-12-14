@@ -5,14 +5,14 @@ INSERT INTO tb_name (name, meaning, gender) VALUES ('Abel', 'Abel(es)', 'MALE');
 INSERT INTO tb_name (name, meaning, gender) VALUES ('Abel', 'Abel(fr)', 'MALE');
 INSERT INTO tb_name (name, meaning, gender)	VALUES ('Abelin', 'Avelino (es)', 'MALE');
 
-INSERT INTO tb_name (name, meaning, gender)	VALUES ('Bruno', '', 'MALE');
 INSERT INTO tb_name (name, meaning, gender)	VALUES ('Romeu', '', 'MALE');
-INSERT INTO tb_name (name, meaning, gender)	VALUES ('Julia', '', 'FEMALE');
-INSERT INTO tb_name (name, meaning, gender)	VALUES ('Marcelo', '', 'MALE');
 INSERT INTO tb_name (name, meaning, gender)	VALUES ('Rodolfo', '', 'MALE');
-INSERT INTO tb_name (name, meaning, gender)	VALUES ('Panda', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Julia', '', 'FEMALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Bruno', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Marcelo Koga', '', 'MALE');
 INSERT INTO tb_name (name, meaning, gender)	VALUES ('Evandro', '', 'MALE');
 INSERT INTO tb_name (name, meaning, gender)	VALUES ('Daniel', '', 'MALE');
+INSERT INTO tb_name (name, meaning, gender)	VALUES ('Alexandre', '', 'MALE');
 
 INSERT INTO tb_country (name) VALUES ('Basque Country (Spain)');
 INSERT INTO tb_country (name) VALUES ('Brazil');
