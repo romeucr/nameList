@@ -50,7 +50,7 @@ public class NameService {
 	@Transactional(readOnly = true)
 	public Page<NameDTO> findName(String name, Pageable pageable) { 
 	
-		name = "%" + name + "%";
+		//name = "%" + name + "%";
 		Page<Name> page = nameRepository.findNameIgnoreCase(name, pageable);
 		
 		return page.map(x -> new NameDTO(x));
