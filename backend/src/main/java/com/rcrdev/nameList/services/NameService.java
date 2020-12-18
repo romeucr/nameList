@@ -15,44 +15,10 @@ public class NameService {
 
 	@Autowired 
 	NameRepository nameRepository;
-	
-	
-	/* NOT IMPLEMENTED ON FRONT END
-	 * @Transactional(readOnly = true) public Page<NameDTO> findAllPaged(PageRequest
-	 * pageRequest) { Page<Name> nameList = nameRepository.findAll(pageRequest);
-	 * 
-	 * return nameList.map(x -> new NameDTO(x)); }
-	 * 
-	 * @Transactional(readOnly = true) public List<NameDTO> findByName(String name)
-	 * { List<Name> nameList =
-	 * nameRepository.findByNameLikeIgnoreCase("%"+name+"%");
-	 * 
-	 * if (nameList.size() == 0) { throw new
-	 * ResourceNotFoundException("Name not found on database"); }
-	 * 
-	 * return nameList.stream().map(obj -> new
-	 * NameDTO(obj)).collect(Collectors.toList()); }
-	 * 
-	 * @Transactional(readOnly = true) public List<NameDTO>
-	 * findNameStartsWithLetter(char letter) {
-	 * 
-	 * List<Name> nameList; try { nameList =
-	 * nameRepository.findByNameStartsWithIgnoreCase(letter); } catch
-	 * (IllegalArgumentException e) { throw new IllegalArgumentException();
-	 * 
-	 * } if (nameList.size() == 0) { throw new
-	 * ResourceNotFoundException("Name not found on database"); }
-	 * 
-	 * return nameList.stream().map(obj -> new
-	 * NameDTO(obj)).collect(Collectors.toList()); }
-	 */
-	
 	@Transactional(readOnly = true)
-	public Page<NameDTO> findName(String name, Pageable pageable) { 
-	
-		name = "%" + name + "%";
-		Page<Name> page = nameRepository.findNameIgnoreCase(name, pageable);
-		
+	public Page<NameDTO> searchName(String name, Pageable pageable) { 
+		Page<Name> page = nameRepository.searchName(name, pageable);
 		return page.map(x -> new NameDTO(x));
 	}
+
 }

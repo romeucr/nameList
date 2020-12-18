@@ -19,20 +19,20 @@ INSERT INTO tb_country (name) VALUES ('Brazil');
 INSERT INTO tb_country (name) VALUES ('Spain');
 INSERT INTO tb_country (name) VALUES ('Portugal');
 
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('1', '2');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('2', '1');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('3', '4');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('4', '1');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('5', '1');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('6', '3');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('7', '2');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('8', '4');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('9', '1');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('10', '2');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('11', '3');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('12', '4');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('13', '1');
-INSERT INTO tb_name_country (name_id, country_id) VALUES ('14', '4');
+INSERT INTO tb_name_country (name_id, country_id) VALUES (1, 2);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (2, 1);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (3, 4);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (4, 1);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (5, 1);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (6, 3);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (7, 2);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (8, 4);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (9, 1);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (10, 2);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (11, 3);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (12, 4);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (13, 1);
+INSERT INTO tb_name_country (name_id, country_id) VALUES (14, 4);
 
 
 
