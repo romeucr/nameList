@@ -26,7 +26,7 @@ const Search = () => {
    }, [activePage, searchName])
 
    const onSubmit = (data: NameData) => {
-         setSearchName(data.name.toLowerCase())
+         setSearchName(data.name)
          setActivePage(0)
 }
 

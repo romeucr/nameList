@@ -10,13 +10,13 @@
    padding: 25px 50px;
 }
 
-.text-title {
-   font-size: 30px;
+.home-content p {
+   margin-left: 15px;
 }
 
-.text {
-   font-size: 15px;
-   margin-top: 20px;
+.home-title {
+   font-size: 30px;
+   margin-bottom: 10px;
 }
 
 .img-btn-container {
@@ -28,4 +28,19 @@
 
 .btn-search {
    margin-top: 20px;
+}
+
+.features-title {
+   margin-top: 35px;
+   margin-bottom: 10px;
+}
+
+.fa-check {
+   color: green;
+   margin-right: 10px;
+}
+
+.fa-times {
+   color: red;
+   margin-right: 10px;
 }
