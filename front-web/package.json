@@ -1,6 +1,5 @@
 {
-  "proxy": "http://localhost:8080",
-  "name": "front-web2",
+  "name": "front-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
