@@ -3,9 +3,8 @@ import ButtonIcon from '../../core/components/ButtonIcon'
 import { NameData, NameResponse } from '../../core/types/Name'
 import { makeRequest } from '../../core/utils/request'
 import './styles.scss'
-import Pagination from '../../core/components/Pagination'
 import { useForm } from 'react-hook-form'
-
+import { Pagination } from '@material-ui/lab';
 
 const Search = () => {
 
@@ -17,7 +16,7 @@ const Search = () => {
    useEffect(() => {
       const params = {
          page: activePage,
-         linesPerPage: 5
+         size: 50
       }
 
       makeRequest({ url: `/names/search?name=${searchName}`, params })
@@ -26,9 +25,9 @@ const Search = () => {
    }, [activePage, searchName])
 
    const onSubmit = (data: NameData) => {
-         setSearchName(data.name)
-         setActivePage(0)
-}
+      setSearchName(data.name)
+      setActivePage(0)
+   }
 
    return (
       <div className="search-container">
@@ -40,7 +39,7 @@ const Search = () => {
                   <input
                      type="text"
                      className="name-input"
-                     name="name"                     
+                     name="name"
                      ref={register}
                   />
                   <ButtonIcon text="Search" />
@@ -53,7 +52,7 @@ const Search = () => {
                <thead className="thead-dark">
                   <tr>
                      <th>NAME</th>
-                     <th>MEANING</th>
+                     <th>EQUIVALENT NAME</th>
                      <th>GENDER</th>
                      <th>ORIGIN</th>
                   </tr>
@@ -69,12 +68,27 @@ const Search = () => {
                   ))}
                </tbody>
             </table>
+            {/* MY PAGINATION COMPONENT            
             {nameResponse &&
                <Pagination
                   totalPages={nameResponse.totalPages}
                   activePage={activePage}
                   onChange={page => setActivePage(page)}
                />
+            } */}
+            {/* MATERIAL-UI'S PAGINATION COMPONENT */}
+            {nameResponse &&
+               <span className="pagination">
+                  {/* Using material-ui pagination instead mine because mine does not handle well lots of pages */}
+                  <Pagination
+                     count={nameResponse.totalPages}
+                     onChange={(_event, val) => setActivePage(val - 1)}
+                     page={activePage + 1}
+                     shape="rounded"
+                     variant="outlined"
+                     color="primary"
+                  />
+               </span>
             }
          </div>
       </div>
