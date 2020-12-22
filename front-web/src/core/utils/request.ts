@@ -6,7 +6,11 @@ type RequestParams = {
    params?: object
 }
 
-const BASE_URL = 'http://localhost:3000'
+// DEV URL
+//const BASE_URL = 'http://localhost:3000'
+
+// PROD URL
+const BASE_URL = 'https://rcrdev-namelist.herokuapp.com'
 
 export const makeRequest = ({ method = 'GET', url, params }:RequestParams ) => {
    return axios({
