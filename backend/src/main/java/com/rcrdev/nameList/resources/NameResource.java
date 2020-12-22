@@ -24,7 +24,7 @@ public class NameResource {
 	public ResponseEntity<Page<NameDTO>> findName(
 			@RequestParam(value = "name", defaultValue = "") String name,
 			@RequestParam(value = "page", defaultValue = "0") Integer page,
-			@RequestParam(value = "size", defaultValue = "5") Integer size,
+			@RequestParam(value = "size", defaultValue = "15") Integer size,
 			@RequestParam(value = "direction", defaultValue = "ASC") String direction,
 			@RequestParam(value = "orderBy", defaultValue = "name") String orderBy) {
 
