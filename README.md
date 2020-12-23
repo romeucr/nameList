@@ -5,13 +5,14 @@ This project consists of a fullstack search platform built in Java(backend) and 
 The names used were colected from [Euskaltzaindia's website](https://www.euskaltzaindia.eus/en/).  
 
 ## Features  
-It is not fully implemented. The features will be implemented as soon as I learn how to code it :smiley:
-* :white_check_mark: &nbsp;Show all names
-* :white_check_mark: &nbsp;Search by name
-* :x: &nbsp;Admin area with CRUD operations
-* :x: &nbsp;&nbsp;Add names from other countries
-* :x: &nbsp;Vote/like a name
-* :x: &nbsp;Display statistics/graphics of voted/liked names
+It is not fully implemented. The features will be implemented as soon as I learn how to code it :smiley:  
+
+&nbsp;&nbsp;&nbsp;:white_check_mark: &nbsp;Show all names  
+&nbsp;&nbsp;&nbsp;:white_check_mark: &nbsp;Search by name  
+&nbsp;&nbsp;&nbsp;:x: &nbsp;Admin area with CRUD operations  
+&nbsp;&nbsp;&nbsp;:x: &nbsp;Add names from other countries  
+&nbsp;&nbsp;&nbsp;:x: &nbsp;Vote/like a name  
+&nbsp;&nbsp;&nbsp;:x: &nbsp;Display statistics/graphics of voted/liked names
 
 ## Some technologies used:
 ### Back end
