@@ -6,12 +6,12 @@ The names used were colected from [Euskaltzaindia's website](https://www.euskalt
 
 ## Features  
 It is not fully implemented. The features will be implemented as soon as I learn how to code it :smiley:
-* Show all names
-* Search by name
-* Admin area with CRUD operations
-* Add names from other countries
-* Vote/like a name
-* Display statistics/graphics of voted/liked names
+* :white_check_mark: &nbsp;Show all names
+* :white_check_mark: &nbsp;Search by name
+* :x: &nbsp;Admin area with CRUD operations
+* :x: &nbsp;&nbsp;Add names from other countries
+* :x: &nbsp;Vote/like a name
+* :x: &nbsp;Display statistics/graphics of voted/liked names
 
 ## Some technologies used:
 ### Back end
